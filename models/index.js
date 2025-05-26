@@ -3,15 +3,13 @@ import path from 'path';
 import { Sequelize, DataTypes } from 'sequelize';
 import { fileURLToPath } from 'url';
 import process from 'process';
-import { createRequire } from 'module';
+import configFile from '../config/config.js';  // <-- import ESM config
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
 
-const require = createRequire(import.meta.url);
-const configFile = require('../config/config.json');
 const config = configFile[env];
 
 const db = {};
