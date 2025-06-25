@@ -2,8 +2,6 @@
 
 A Node.js and Express-based API that allows users to add and list schools. The listing is sorted by proximity to a user-specified location using MySQL as the database.
 
----
-
 ## 🚀 Features
 
 * Add a new school with validation.
